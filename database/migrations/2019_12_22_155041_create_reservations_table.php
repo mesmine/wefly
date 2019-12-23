@@ -18,6 +18,8 @@ class CreateReservationsTable extends Migration
             $table->date('date');
             $table->time('heure');
             $table->string('numero')->unique();
+            $table->string('nomPassager');
+            $table->string('telephonePassager')->unique();
             $table->enum('etat',['annule','confirme']);
 
             $table->bigInteger('clientid');
