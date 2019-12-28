@@ -16,8 +16,9 @@ class CreateVolsTable extends Migration
         Schema::create('vols', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
+            $table->string('nom');
             $table->string('aeroportDepart');
-            $table->string('aeroportarrivee');
+            $table->string('aeroportArrivee');
             $table->enum('etat',['ouvert','ferme']);
             $table->date('jourDepart');
             $table->date('jourArrivee');

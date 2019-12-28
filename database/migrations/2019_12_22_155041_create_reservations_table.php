@@ -22,8 +22,16 @@ class CreateReservationsTable extends Migration
             $table->string('telephonePassager')->unique();
             $table->enum('etat',['annule','confirme']);
 
-            $table->bigInteger('clientid');
-            $table->bigInteger('volid');
+            $table->bigInteger('volId')->unsigned();
+            $table->foreign('volId')
+                ->references('id')
+                ->on('vols')
+                ->onDelete('cascade');
+            $table->bigInteger('clientId')->unsigned();
+            $table->foreign('clientId')
+                ->references('id')
+                ->on('clients')
+                ->onDelete('cascade');
 
             $table->timestamps();
         });

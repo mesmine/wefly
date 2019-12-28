@@ -2,7 +2,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card card-default">
-                <div class="card-header">Welcome to MyFly</div>
+                <div class="card-header">Welcome to Wefly</div>
 
                 <div class="card-body">
                  Make a reservation
